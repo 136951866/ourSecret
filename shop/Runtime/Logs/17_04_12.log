@@ -1,0 +1,33 @@
+[ 2017-04-12T11:05:33+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Home&c=User&a=login
+ERR: 模板不存在:C:/wamp/www/ourSecret/shop/Home/View/User/login.html
+
+[ 2017-04-12T14:34:14+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Admin&c=User&a=login
+ERR: 无法加载控制器:User
+
+[ 2017-04-12T14:34:28+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Admin&c=Index&a=login
+ERR: 无法加载控制器:Index
+
+[ 2017-04-12T14:34:31+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Admin&c=Index&a=login
+ERR: 无法加载控制器:Index
+
+[ 2017-04-12T14:34:47+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Admin&c=Index&a=login
+ERR: 非法操作:login
+
+[ 2017-04-12T14:35:52+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Admin&c=Index&a=login
+ERR: 非法操作:login
+
+[ 2017-04-12T14:35:58+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Admin&c=User&a=login
+ERR: 无法加载控制器:User
+
+[ 2017-04-12T14:41:19+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Admin&c=Manager&a=login
+ERR: 模板不存在:C:/wamp/www/ourSecret/shop/Admin/View/Manager/login.html
+
+[ 2017-04-12T14:43:57+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Admin&c=Index&a=index
+ERR: 非法操作:index
+
+[ 2017-04-12T16:42:20+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Home&c=Goods&a=showlist
+ERR: Think\Controller:number方法不存在！
+
+[ 2017-04-12T16:42:23+08:00 ] 127.0.0.1 /ourSecret/shop/index.php?m=Home&c=Goods&a=showlist
+ERR: Think\Controller:number方法不存在！
+
