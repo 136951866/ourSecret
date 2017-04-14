@@ -1,0 +1,96 @@
+[ 2017-04-13T11:25:56+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:26:33+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:26:35+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:27:04+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:27:08+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:27:11+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:27:20+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:28:00+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:28:02+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:28:02+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:28:27+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:28:28+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Think\Controller:addign方法不存在！
+
+[ 2017-04-13T11:29:00+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: 没有定义数据库配置
+
+[ 2017-04-13T11:29:03+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: 没有定义数据库配置
+
+[ 2017-04-13T11:29:18+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/showlist
+ERR: Syntax Error in template "C:/wamp/www/ourSecret/shop/Admin/View\Goods\showlist.html"  on line 12 ".tr_color{background-color: #9F88FF}"  - Unexpected ": ", expected one of: "}" , " "
+
+[ 2017-04-13T11:29:42+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2017-04-13T11:32:45+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/__MODULE__/Goods/upd
+ERR: 非法操作:__module__
+
+[ 2017-04-13T11:34:02+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2017-04-13T11:34:02+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2017-04-13T11:34:31+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2017-04-13T14:42:17+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2017-04-13T14:58:57+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/add
+ERR: Think\Controller:sucess方法不存在！
+
+[ 2017-04-13T14:59:20+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/add
+ERR: Unable to load template file 'w\ourSecret\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2017-04-13T15:10:55+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/upd
+ERR: Syntax Error in template "C:/wamp/www/ourSecret/shop/Admin/View\Goods\upd.html"  on line 58 "&lt;td&gt;&lt;input type=&quot;file&quot; name=&quot;f_goods_image&quot; value=&quot;{{$smarty.const.__MODULE__}.const.ADMIN_IMG_URL}2013-12-33.jpg&quot; /&gt;&lt;/td&gt;"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2017-04-13T15:10:58+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/upd
+ERR: Syntax Error in template "C:/wamp/www/ourSecret/shop/Admin/View\Goods\upd.html"  on line 58 "&lt;td&gt;&lt;input type=&quot;file&quot; name=&quot;f_goods_image&quot; value=&quot;{{$smarty.const.__MODULE__}.const.ADMIN_IMG_URL}2013-12-33.jpg&quot; /&gt;&lt;/td&gt;"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2017-04-13T15:23:57+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/__CONTROLLER__/head
+ERR: 无法加载控制器:_CONTROLLER__
+
+[ 2017-04-13T15:23:57+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/__CONTROLLER__/left
+ERR: 无法加载控制器:_CONTROLLER__
+
+[ 2017-04-13T15:23:57+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/__CONTROLLER__/right
+ERR: 无法加载控制器:_CONTROLLER__
+
+[ 2017-04-13T15:27:03+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/index/__MODULE__/Goods/showlist
+ERR: 非法操作:__module__
+
+[ 2017-04-13T15:27:13+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/index/Goods/showlist
+ERR: 非法操作:goods
+
+[ 2017-04-13T15:52:47+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/add
+ERR: Unable to load template file 'w\ourSecret\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2017-04-13T15:56:19+08:00 ] 127.0.0.1 /ourSecret/shop/index.php/admin/Goods/U(
+ERR: 非法操作:u(
+

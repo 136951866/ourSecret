@@ -1,0 +1,72 @@
+[ 2017-04-14T10:49:26+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:50:17+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:50:19+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:50:37+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:50:37+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:50:39+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:50:59+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:52:40+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:52:40+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:52:43+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/User_Login.css
+ERR: 非法操作:user_login.css
+
+[ 2017-04-14T10:55:48+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/verifyImg
+ERR: 非法操作:verifyimg
+
+[ 2017-04-14T11:07:07+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/login
+ERR: Think\Model:checkNamePwd方法不存在！
+
+[ 2017-04-14T11:08:49+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/login
+ERR: Think\Model:checkNamePwd方法不存在！
+
+[ 2017-04-14T11:10:34+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/login
+ERR: Think\Model:checkNamePwd方法不存在！
+
+[ 2017-04-14T11:24:08+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/login
+ERR: 无法加载控制器:Login
+
+[ 2017-04-14T11:37:57+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/index/right
+ERR: Syntax Error in template "C:/wamp/www/ourSecret/shop/Admin/View\Index\right.html"  on line 50 "&lt;td style=&quot;color: #880000&quot;&gt;{$rst.mg_time]}&lt;/td&gt;&lt;/tr&gt;"  - Unexpected "]", expected one of: "}" , " "
+
+[ 2017-04-14T12:38:44+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/index/mg_id/4.html
+ERR: 非法操作:index
+
+[ 2017-04-14T12:39:04+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/index.html
+ERR: 非法操作:index
+
+[ 2017-04-14T12:39:06+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/index.html
+ERR: 非法操作:index
+
+[ 2017-04-14T12:39:11+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/index.html
+ERR: 非法操作:index
+
+[ 2017-04-14T12:39:14+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/index/mg_id/4.html
+ERR: 非法操作:index
+
+[ 2017-04-14T12:39:15+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/manager/index/mg_id/4.html
+ERR: 非法操作:index
+
+[ 2017-04-14T12:41:11+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/index/right/mg_id/
+ERR: 参数错误或者未定义:mg_id
+
+[ 2017-04-14T12:47:38+08:00 ] 127.0.0.1 /oursecret/shop/index.php/admin/index/head
+ERR: 参数错误或者未定义:mg_id
+

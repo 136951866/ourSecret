@@ -1,9 +1,31 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-13 14:52:25
+         compiled from "C:/wamp/www/ourSecret/shop/Admin/View\Goods\add.html" */ ?>
+<?php /*%%SmartyHeaderCode:2112558ef1dc942ace3-95649398%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '18b0194b1329c3eb94d4cf7148d7aeb0f4f725c7' => 
+    array (
+      0 => 'C:/wamp/www/ourSecret/shop/Admin/View\\Goods\\add.html',
+      1 => 1492066263,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2112558ef1dc942ace3-95649398',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58ef1dc96a41a',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58ef1dc96a41a')) {function content_58ef1dc96a41a($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
         <title>添加商品</title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
-        <link href="{$smarty.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet">
+        <link href="<?php echo @ADMIN_CSS_URL;?>
+mine.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
@@ -19,7 +41,8 @@
         <div></div>
 
         <div style="font-size: 13px;margin: 10px 5px">
-            <form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
+            <form action="<?php echo @__SELF__;?>
+" method="post" enctype="multipart/form-data">
             <table border="1" width="100%" class="table_a">
                 <tr>
                     <td>商品名称</td>
@@ -53,4 +76,4 @@
             </form>
         </div>
     </body>
-</html>
+</html><?php }} ?>

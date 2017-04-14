@@ -148,9 +148,142 @@ ThinkPHP/Library/Think/Think.class.php    function autoload();
         利用“反射”实现对象调用方法
     
 
+#11 model
 
+1. 可以根据情况对当前的model模型进行个性化设置
+2. 实例化model的三种方式
+1.$goods =  new  命名空间GoodsModel();  
+2.$goods = D(‘模型标志’);    
+a)$goods = D(“Goods”);
+b)该$goods是父类Model的对象，但是操作的数据表还是sw_goods
+c)$obj = D();  实例化Model对象，没有具体操作数据表，与M()方法效果一致
+3.$obj = M(); 
+a)实例化父类Model
+b)可以直接调用父类Model里边的属性，获得数据库相关操作
+c)自定义model就是一个空壳，没有必要实例化自定义model
+d)$obj = M(‘数据表标志’);  实例化Model对象，实际操作具体的数据表
+$obj = D(标志);
+$obj = D();
+$obj = M(标志);
+$obj = M();
+D()和M()方法的区别：
+前者是tp3.1.3里边对new操作的简化方法;
+后者在使用就是实例化Model父类
+    两者都在函数库文件定义ThinkPHP/Common/functions.php
+注意：如果没有对应的model模型文件类，也可以直接实例化model对象进行操作
+D()和M()方法都可以实例化操作一个没有具体model模型类文件的数据表。
 
+#12 数据库
+1. 配置
+配置smarty behavior配置文件中
+'TMPL_ENGINE_TYPE'      =>  'Smarty',
+tp->smarty
+a)  css样式如果有{}，需要使用{literal}标签禁止smarty解析
+b)  关键字$Think 变为 $smarty
+c)  tp引擎会对关键常量进行替换例如:__CONTROLLER__   __MODULE__
+smarty引擎不给替换,需要设置为：{$smarty.const.__CONTROLLER__}
 
+2. 各种查询条件设置
+$obj = D();  创建对象
+$obj -> select();  查询数据
+select  字段，字段  from  表名  where 条件  group 字段 having  条件   order 排序  limit 限制条数;
+SELECT%DISTINCT%%FIELD%FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%%ORDER%%LIMIT% %UNION%%COMMENT%
+
+3. 语法
+$obj -> field(字段，字段);  查询指定字段
+$obj -> table(数据表);   设置具体操作数据表
+$obj -> where(参数);   参数就是正常sql语句where后边的条件信息
+例如：( “goods_price >100 and  goods_name like ‘三%’”)
+$obj -> group(字段);  根据字段进行分组查询
+$obj -> having(参数条件);  having 条件设置
+$obj -> order(‘price  desc/asc’)  排序查询
+$obj -> limit([偏移量，]条数)  限制查询的条数
+sql语句里边具体的条件设置在tp框架model模型里边体现为具体的方法操作
+以上方法理论上是父类Model的对应方法
+父类model具体存在方法：   field()  where()   limit()
+还有一些方法在__call()自动调用函数里边： table()  group()  order()  having()
+    在__call()魔术方法里边会判断当前的执行方法是否是一个method属性的元素信息，如果存在就会执行执行
+以上多个方法是同时使用多个进行条件显示（并且没有顺序要求）
+$obj -> limit(5)->field(‘id,name’)->order(‘price asc’) -> table(‘sw_goods’)->select();
+以上许多方法执行没有顺序要求，许多方法执行后都是把具体的参数赋予到model属性options里边,最后根据options拼装sql语句。
+
+4. having()方法设置查询条件，where()设置查询条件
+having  和 where区别
+①   使用有先后顺序
+②   where  price>100     having price>100
+③   where  设置条件，字段必须是数据表中存在的字段 
+④   having 设置条件，字段必须是select语句查询出来的字段可以使用
+select goosd_price,goosd_name form sw_goods where goosd_price >100
+select goosd_price,goosd_name form sw_goods  having goosd_price>100
+只可以where
+select goosd_name form sw_goods where goosd_price >100
+select goosd_name form sw_goods having goosd_price >100 （error）
+只可以having
+//查询每种goosd_category_id商品的价格平均值，获取平均价格>1000
+select goosd_category_id,avg(goods_price) as ag form sw_goods group by goosd_category_id having ag>1000
+
+5. 其他方法
+相关聚合函数 count()  sum()   avg()   max()   min()
+
+6. 数据添加
+select()
+add() 该方法返回被添加的新记录的主键id值
+save()
+delete()
+两种方式实现数据添加
+1.数组方式数据添加
+$goods = D(“Goods”);
+$arr = array(‘goods_name’=>’iphone5s’,’goods_weight’=>’109’);
+//注意:goods_name和goods_weight是数据表中字段名称
+$goods -> add($arr);
+2.AR方式实现数据添加
+a)  ActiveRecord  活跃记录
+b)  AR规定了程序与数据库之间的关系
+c)  什么是AR：
+d)  ① 一个数据表对应一个类model
+e)  ② 一条数据记录对应类的一个对象
+f)  ③ 每个字段对应该对象的具体属性
+g)  tp框架的AR是假的
+$goods = D(“Goods”);
+$goods -> goods_name = “htc_one”;
+$goods -> goods_price = 3000;
+$goods -> add();
+以上两种方式：数组、AR，最后add都要把新记录的主键id值返回
+6. 收集数据
+1.制作一个表单
+2.通过$_POST收集信息
+3.通过create()方法实现数据收集，该方法对于非法的字段会自动进行过滤
+4.在create()收集表单方法内部会自动过滤非法的字段信息
+7. 修改
+select()
+add()
+save()  实现数据修改，返回受影响的记录条数
+delete()
+具体有两种方式实现数据修改，与添加类似(数组、AR方式)
+1.数组方式
+a)$goods = D(“Goods”);
+b   $ar = array(‘goods_id’=>100,‘goods_name’=>’lenovo手机’,’goods_price’=>1200);
+c)$goods ->where(‘goods_id>50’)-> save($ar);
+2.AR方式
+a)$goods = D(“Goods”);
+b)$goods -> goods_id = 53;
+c)$goods -> goods_name = “三星手机”;
+d)$goods -> goods_price = 2000;
+e)$goods -> where(‘goods_price>10000’)->save();
+以上两种方式如果可行，即要修改全部数据
+以上sql语句从技术上可行，从业务上不可行(事故)
+tp框架有智能考虑，以上情况的sql语句不被允许执行。
+如何执行：
+①   明确告诉系统那条sql语句被update更新
+②   可以设置where进行sql语句更新操作
+save()  方法返回值
+0：之前没有问题，执行前后数据没有变化
+自然数：受影响的记录条数
+false：执行失败
+
+#13 数据传输
+vc->view $this->assign('mg_id',$mg_id);(smarty)
+view->vc url／method/mg_id/{$mg_id) 在method（¥arg）
 
 
 
@@ -165,8 +298,14 @@ A("Home/User")    实例化User控制器对象
 A("book://Home/User")    实例化book项目的Home模块的User控制器对象
 A(“[模块/]控制器标志”) 实例化控制器对象
 R([模块/]控制器标志/操作方法)  实例化对象同时调用指定方法
+D([“模型标志Goods”])(之前版本会实例化自定义model对象，目前都实例化Model基类对象)
+M([模型标志]); 
+D()和M()方法的区别：
+前者是tp3.1.3里边对new操作的简化方法;
+后者在使用就是实例化Model父类
+    两者都在函数库文件定义ThinkPHP/Common/functions.php
+注意：如果没有对应的model模型文件类，也可以直接实例化model对象进行操作
+D()和M()方法都可以实例化操作一个没有具体model模型类文件的数据表。
 
-
-    
 
 

@@ -14,4 +14,10 @@ define("ADMIN_JS_URL",SITE_URl."shop/public/Admin/js/");
 
 include "../ThinkPHP/ThinkPHP.php";
 
+function show_bug($m){
+	echo "<pre>";
+	var_dump($m);
+	echo "<pre>";
+}
+
 ?>
